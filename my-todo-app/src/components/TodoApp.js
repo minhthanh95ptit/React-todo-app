@@ -51,7 +51,7 @@ class TodoApp extends React.Component{
   componentDidMount() {
     const config = {
       params: {
-        _limit: 10
+        _limit: 5
       }
     }
     //tạo GET request để lấy danh sách todos

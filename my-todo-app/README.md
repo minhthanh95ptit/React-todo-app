@@ -6,7 +6,7 @@
 - Props vs State
 - Chia tách components
 
-- Life Circle
+- Life Circle (Class component)
   + Mounting
     - componentWillMount()
     - render()
@@ -19,7 +19,13 @@
     - componentDidUpdate()
   + Unmounting
     - componentWillUnmount()
-    
+
+- React Hooks:
+  const [state, setState] = useState({
+    count: 0,
+    name:'SonDuong'
+  });
+
 +, 1 + 1 - 2 = 0
 +, "1" + "1" - "2" = 11 - 2 = 9
 +, "1" - "1" + 2 = 2
