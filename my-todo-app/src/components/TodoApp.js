@@ -2,7 +2,8 @@ import React from "react";
 import Header from "./layout/Header";
 import Todos from "./Todos"
 import AddTodo from "./AddTodo"
-
+  
+const { uuid } = require('uuidv4');
 
 class TodoApp extends React.Component{
 
@@ -47,11 +48,22 @@ class TodoApp extends React.Component{
     })
   };
 
+  addTodo = title => {
+    const newTodo = {
+      id: uuid(),
+      title: title,
+      completed: false
+    };
+    this.setState({
+      todos: [...this.state.todos, newTodo]
+    });
+  };
+
   render(){
     return (
       <div className="container">
         <Header/>
-        <AddTodo/>
+        <AddTodo addTodo={this.addTodo}/>
         <Todos 
           todos={this.state.todos} 
           handleChange={this.handleCheckboxChange}
