@@ -1,15 +1,10 @@
 import Header from "./layout/Header";
 import Todos from "./Todos"
 import AddTodo from "./AddTodo"
-<<<<<<< HEAD
 import axios from "axios"
 import Footer from "../store/containers/Footer"
 
 import React, { useState, useEffect } from "react"
-=======
-  
-const { uuid } = require('uuidv4');
->>>>>>> b93edac13124dcf7a8ad23ec45632f4ddc195959
 
 function TodoApp(){
 
@@ -39,7 +34,6 @@ function TodoApp(){
       }))
   };
 
-<<<<<<< HEAD
 const addTodo = title => {
   console.log("add to do")
     const todoData = {
@@ -80,32 +74,6 @@ const addTodo = title => {
       <Footer />
     </div>
   )
-=======
-  addTodo = title => {
-    const newTodo = {
-      id: uuid(),
-      title: title,
-      completed: false
-    };
-    this.setState({
-      todos: [...this.state.todos, newTodo]
-    });
-  };
-
-  render(){
-    return (
-      <div className="container">
-        <Header/>
-        <AddTodo addTodo={this.addTodo}/>
-        <Todos 
-          todos={this.state.todos} 
-          handleChange={this.handleCheckboxChange}
-          deleteTodo={this.deleteTodo}
-        />
-      </div>
-    );
-  }
->>>>>>> b93edac13124dcf7a8ad23ec45632f4ddc195959
 }
 
 
