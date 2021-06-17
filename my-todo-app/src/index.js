@@ -5,10 +5,16 @@ import reportWebVitals from './reportWebVitals';
 import TodoApp from "./components/TodoApp"
 import './App.css'
 
+import { createStore } from "redux"
+import { Provider } from "react-redux"
+import rootReducer from "./store/reducers"
+
+const store = createStore(rootReducer);
+
 ReactDOM.render(
-  <TodoApp />,
-  document.getElementById("root")
-);
+  <Provider store={store}>
+    <TodoApp />,
+  </Provider>, document.getElementById('root'));
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
